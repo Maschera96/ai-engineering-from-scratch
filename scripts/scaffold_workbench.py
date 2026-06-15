@@ -20,7 +20,7 @@ What it installs:
     .workbench-version             — pinned pack version
 
 The pack source is read from this repo at:
-    phases/14-agent-engineering/42-agent-workbench-capstone/outputs/agent-workbench-pack/
+    phases/14-agent-engineering-智能体工程/42-agent-workbench-capstone-智能体workbench综合实战/outputs/agent-workbench-pack/
 """
 
 from __future__ import annotations

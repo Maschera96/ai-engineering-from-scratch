@@ -61,8 +61,8 @@ from _lib import parse_frontmatter as _parse_frontmatter  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent
 PHASES_DIR = ROOT / "phases"
 
-PHASE_DIR_RE = re.compile(r"^([0-9]{2})-([a-z0-9][a-z0-9-]*)$")
-LESSON_DIR_RE = re.compile(r"^([0-9]{2})-([a-z0-9][a-z0-9-]*)$")
+PHASE_DIR_RE = re.compile(r"^([0-9]{2})-([a-z0-9][a-z0-9-]*[a-z0-9])(?:-.+)?$")
+LESSON_DIR_RE = re.compile(r"^([0-9]{2})-([a-z0-9][a-z0-9-]*[a-z0-9])(?:-.+)?$")
 H1_RE = re.compile(r"^#\s+(.+?)\s*$", re.MULTILINE)
 ARTIFACT_TYPES = ("skill", "prompt", "agent")
 CODE_SUFFIXES = {".py", ".ts", ".tsx", ".js", ".mjs", ".rs", ".jl", ".go", ".swift", ".ipynb"}

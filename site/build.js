@@ -133,7 +133,7 @@ function parseReadme(content, roadmapStatuses) {
 
     // Parse lesson rows
     if (inLessonTable && currentPhase && line.startsWith('|')) {
-      // | 01 | [Dev Environment](phases/00-setup-and-tooling/01-dev-environment/) | Build | Python, Node, Rust |
+      // | 01 | [Dev Environment](phases/00-setup-and-tooling-环境搭建与工具链/01-dev-environment-开发环境/) | Build | Python, Node, Rust |
       // | 02 | Multi-Layer Networks & Forward Pass | Build | Python |
       const cols = line.split('|').map(c => c.trim()).filter(c => c.length > 0);
       if (cols.length >= 4) {
@@ -343,12 +343,12 @@ function discoverArtifacts() {
   if (!fs.existsSync(phasesDir)) return artifacts;
   const VALID_TYPES = ['skill', 'prompt', 'agent'];
   for (const phaseDirName of fs.readdirSync(phasesDir).sort()) {
-    const phaseMatch = phaseDirName.match(/^([0-9]{2})-([a-z0-9-]+)$/);
+    const phaseMatch = phaseDirName.match(/^([0-9]{2})-(.+)$/);
     if (!phaseMatch) continue;
     const phaseId = parseInt(phaseMatch[1], 10);
     const phaseDir = path.join(phasesDir, phaseDirName);
     for (const lessonDirName of fs.readdirSync(phaseDir).sort()) {
-      const lessonMatch = lessonDirName.match(/^([0-9]{2})-([a-z0-9-]+)$/);
+      const lessonMatch = lessonDirName.match(/^([0-9]{2})-(.+)$/);
       if (!lessonMatch) continue;
       const lessonId = parseInt(lessonMatch[1], 10);
       const lessonRel = `phases/${phaseDirName}/${lessonDirName}`;

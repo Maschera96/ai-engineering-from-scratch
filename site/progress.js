@@ -18,7 +18,7 @@
  *   }
  *
  * "<lesson-path>" matches the path used in lesson.html?path=... and in
- * data.js urls (e.g. "phases/00-setup-and-tooling/01-dev-environment").
+ * data.js urls (e.g. "phases/00-setup-and-tooling-环境搭建与工具链/01-dev-environment-开发环境").
  *
  * "<qid>" is "<stage>-q<index>" e.g. "pre-q0", to match the quiz renderer.
  */

@@ -22,8 +22,8 @@ from typing import Iterable
 ROOT = Path(__file__).resolve().parent.parent
 PHASES_DIR = ROOT / "phases"
 
-LESSON_DIR_RE = re.compile(r"^[0-9]{2}-[a-z0-9][a-z0-9-]*[a-z0-9]$")
-PHASE_DIR_RE = re.compile(r"^[0-9]{2}-[a-z0-9][a-z0-9-]*[a-z0-9]$")
+LESSON_DIR_RE = re.compile(r"^[0-9]{2}-[a-z0-9][a-z0-9-]*[a-z0-9](?:-.+)?$")
+PHASE_DIR_RE = re.compile(r"^[0-9]{2}-[a-z0-9][a-z0-9-]*[a-z0-9](?:-.+)?$")
 MD_LINK_RE = re.compile(r"\[[^\]]*\]\(([^)\s#]+)(?:#[^)]*)?\)")
 H1_RE = re.compile(r"^#\s+\S", re.MULTILINE)
 
